@@ -2,23 +2,24 @@ import csv
 import os
 
 
-def read_student_data():
+def read_student_data(filename: str) -> list[float]:
     try:
-        with open("Assignment-2/student_data.csv") as csv_file:
+        with open(filename) as csv_file:
             reader = csv.reader(csv_file)
             _ = next(reader)
             avg_grade_list = []
             for row in reader:
-                avg_grade = (int(row[2]) + int(row[3]) + int(row[4]) + int(row[5])) / 4
+                summation = sum(int(num) for num in row[2:])
+                avg_grade = summation / len(row[2:])
                 avg_grade_list.append(avg_grade)
 
-            print(avg_grade_list)
+            return avg_grade_list
 
     except FileNotFoundError as error:
-        print(error)
+        raise error
 
 
-# read_student_data()
+print(read_student_data("assignment_2/assets/student_data.csv"))
 
 
 def address_book_in(operation):
@@ -47,4 +48,4 @@ def address_book_in(operation):
         print("Invalid operation!")
 
 
-address_book_in("search")
+# address_book_in("search")
