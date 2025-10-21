@@ -20,6 +20,3 @@ def word_freq() -> dict:
             freqs[word] = freqs[word] + 1
 
     return freqs
-
-
-print(word_freq())

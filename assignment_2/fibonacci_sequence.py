@@ -11,6 +11,3 @@ def fib_seq(seq_len: int) -> list[int]:
         i += 1
 
     return output
-
-
-print(fib_seq(3))

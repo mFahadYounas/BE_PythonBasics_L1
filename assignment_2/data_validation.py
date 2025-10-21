@@ -24,6 +24,3 @@ def data_type_verifier(val, input_type: str) -> bool:
         return True
     except EmailNotValidError:
         return False
-
-
-print(data_type_verifier("your@gmail.com", "email"))

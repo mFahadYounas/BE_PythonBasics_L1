@@ -19,9 +19,6 @@ def read_student_data(filename: str) -> list[float]:
         raise error
 
 
-# print(read_student_data("assignment_2/assets/student_data.csv"))
-
-
 def address_book_operations(operation: str) -> int:
     file_name = "assignment_2/assets/address_book.csv"
 
@@ -56,6 +53,3 @@ def address_book_operations(operation: str) -> int:
 
         case _:
             raise ValueError("Invalid Operation!")
-
-
-address_book_operations("add")
