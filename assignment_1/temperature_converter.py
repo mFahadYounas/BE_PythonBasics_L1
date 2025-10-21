@@ -1,10 +1,13 @@
-def temp_converter(temp, unit: str):
-    if unit.lower() == "celsius":
-        print(f"{temp * 9 / 5 + 32} Fahrenheit")
-    elif unit.lower() == "fahrenheit":
-        print(f"{((temp - 32) * 5) / 9} Celsius")
-    else:
-        print("Invalid unit")
+def temp_converter(temperature: float, unit: str) -> float:
+    unit = unit.lower()
+
+    match unit:
+        case "celsius":
+            return temperature * 9 / 5 + 32
+        case "fahrenheit":
+            return ((temperature - 32) * 5) / 9
+        case _:
+            raise ValueError("Invalid unit: enter either celsius or fahrenheit!")
 
 
-temp_converter(32, "fahrenheit")
+print(temp_converter(1, "celsius"))
