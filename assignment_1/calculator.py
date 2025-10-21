@@ -15,6 +15,3 @@ def calculator(num1: int, num2: int, operator: str) -> float:
             return out
         case _:
             raise ValueError("Invalid operator!")
-
-
-print(calculator(3, 0, "/"))

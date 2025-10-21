@@ -8,6 +8,3 @@ def temp_converter(temperature: float, unit: str) -> float:
             return ((temperature - 32) * 5) / 9
         case _:
             raise ValueError("Invalid unit: enter either celsius or fahrenheit!")
-
-
-print(temp_converter(1, "celsius"))

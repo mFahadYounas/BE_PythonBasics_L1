@@ -28,7 +28,3 @@ def reverse_list(input_list: list[int]) -> list[int]:
         left_point += 1
         right_point -= 1
     return input_list
-
-
-print(sum_avg_max([1, 3, 66]))
-print(reverse_list([1, 2, 5, 12, 0, 12, 5]))

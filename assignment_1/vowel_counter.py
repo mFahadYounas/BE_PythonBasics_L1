@@ -5,6 +5,3 @@ def vowel_counter(string: str) -> int:
     vowel_count_gen = (1 for c in lower_string if c in vowel_set)
     count = sum(vowel_count_gen)
     return count
-
-
-print(vowel_counter("sfaaeiAn3oxkdjdfdj"))
