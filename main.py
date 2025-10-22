@@ -10,23 +10,29 @@ from assignment_2.word_frequency import word_freq
 from assignment_3.hangman import Hangman
 
 
-def main():
-    # Assignment - 1
-    print(calculator(3, 0, "/"))
-    print(sum_avg_max([1, 3, 66]))
-    print(reverse_list([1, 2, 5, 12, 0, 12, 5]))
-    print(temp_converter(1, "celsius"))
-    print(vowel_counter("sfaaeiAn3oxkdjdfdj"))
+def main() -> None:
+    assignment_selector = int(input("Enter assignment number to check: "))
 
-    # Assignment - 2
-    print(data_type_verifier("your@gmail.com", "email"))
-    print(fib_seq(3))
-    print(read_student_data("assignment_2/assets/student_data.csv"))
-    address_book_operations("add")
-    print(word_freq())
+    match assignment_selector:
+        case 1:
+            # Assignment - 1
+            print(calculator(3, 0, "/"))
+            print(sum_avg_max([1, 3, 66]))
+            print(reverse_list([1, 2, 5, 12, 0, 12, 5]))
+            print(temp_converter(1, "celsius"))
+            print(vowel_counter("sfaaeiAn3oxkdjdfdj"))
 
-    # Assignment - 3
-    Hangman.game()
+        case 2:
+            # Assignment - 2
+            print(data_type_verifier("your@gmail.com", "email"))
+            print(fib_seq(3))
+            print(read_student_data("assignment_2/assets/student_data.csv"))
+            address_book_operations("add")
+            print(word_freq())
+
+        case 3:
+            # Assignment - 3
+            Hangman.game()
 
 
 if __name__ == "__main__":
