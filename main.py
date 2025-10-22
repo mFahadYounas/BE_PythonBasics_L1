@@ -7,6 +7,7 @@ from assignment_2.fibonacci_sequence import fib_seq
 from assignment_2.file_handling import read_student_data
 from assignment_2.file_handling import address_book_operations
 from assignment_2.word_frequency import word_freq
+from assignment_3.hangman import Hangman
 
 
 def main():
@@ -23,6 +24,9 @@ def main():
     print(read_student_data("assignment_2/assets/student_data.csv"))
     address_book_operations("add")
     print(word_freq())
+
+    # Assignment - 3
+    Hangman.game()
 
 
 if __name__ == "__main__":

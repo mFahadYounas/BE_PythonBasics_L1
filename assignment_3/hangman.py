@@ -67,6 +67,3 @@ class Hangman:
             print(f"You Lose! Word was {selected_word}")
 
         return 1
-
-
-Hangman.game()
